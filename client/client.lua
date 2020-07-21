@@ -46,7 +46,7 @@ Citizen.CreateThread(function()
 				ResetPedVisibleDamage(GetPlayerPed(-1))
 				ClearPedLastWeaponDamage(GetPlayerPed(-1))
 				if Config.JD_logs then
-					exports.JD_logs:discord(GetPlayerName(PlayerId())..' `Entered` a SafeZone', PlayerId(), 0, Config.JD_logs_Color, Config.JD_logs_Channel)
+					exports.JD_logs:discord(GetPlayerName(PlayerId())..' `Entered` a SafeZone', GetPlayerServerId(PlayerId()), 0, Config.JD_logs_Color, Config.JD_logs_Channel)
 				end
 				if Config.Notifications then
 					if not Config.pNotify then
@@ -90,7 +90,7 @@ Citizen.CreateThread(function()
 						SetEntityCanBeDamaged(veh, true)
 					end
 					if Config.JD_logs then
-						exports.JD_logs:discord(GetPlayerName(PlayerId())..' `Left` a SafeZone', PlayerId(), 0, Config.JD_logs_Color, Config.JD_logs_Channel)
+						exports.JD_logs:discord(GetPlayerName(PlayerId())..' `Left` a SafeZone', GetPlayerServerId(PlayerId()), 0, Config.JD_logs_Color, Config.JD_logs_Channel)
 					end
 					if Config.Notifications then
 						if not Config.pNotify then
