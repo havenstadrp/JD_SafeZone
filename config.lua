@@ -2,9 +2,9 @@ Config = {}
 
 Config.Notifications = true			-- set this to true if you want notifications
 Config.pNotify = false				-- Set this to true if you want to use pNotify
-Config.Border = false				-- Set this to true if you want a SafeZone Border
+Config.Border = true				-- Set this to true if you want a SafeZone Border
 Config.MapMarker = true				-- Set this to true if you want a marker on the Map
-Config.TranspatentPlayers = false	-- Set this to true if you want Players/Vehicles to become transparent in the safezone
+Config.TranspatentPlayers = true	-- Set this to true if you want Players/Vehicles to become transparent in the safezone
 Config.AntiZoneCamp = false			-- Set this to true will add 10 meters extra to the zone when you exit. (this will not effect entering the zone only exiting)
 
 Config.JD_logs = true				-- Set this to true if you're using JD_logs ( https://github.com/JokeDevil/JD_logs )
@@ -26,4 +26,4 @@ Config.WeaponWheel = "You can NOT use weapons here"
 
 
 -- Version checker for when i update :)
-Config.versionCheck = "1.0.0"
+Config.versionCheck = "1.0.1"

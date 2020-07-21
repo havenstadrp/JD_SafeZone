@@ -12,8 +12,6 @@ function collision(_source)
 	end
 end
 
-local notify = false
-
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
@@ -25,12 +23,6 @@ Citizen.CreateThread(function()
 				if(Vdist(x,y,z,v.x,v.y,v.z) <= v.radius) then
 					Zones.SafeZone = true
 					Zones.x,Zones.y,Zones.z,Zones.radius = v.x,v.y,v.z,v.radius
-					SetCurrentPedWeapon(_source,GetHashKey("WEAPON_UNARMED"),true)
-					ClearPlayerWantedLevel(PlayerId())
-					SetPlayerInvincible(_source,true)
-					if Config.TranspatentPlayers then
-						SetEntityAlpha(PlayerPedId(), 170, false)
-					end
 					inZone = false
 				end
 			end
@@ -39,17 +31,20 @@ Citizen.CreateThread(function()
 			NetworkSetFriendlyFireOption(false)
 			DisableControlAction(2, 37, true)
 			DisablePlayerFiring(_source,true)
-			DisableControlAction(0, 106, true)
+			DisableControlAction(0, 106, true)SetCurrentPedWeapon(_source,GetHashKey("WEAPON_UNARMED"),true)
 			if Config.TranspatentPlayers then
 				SetEntityAlpha(PlayerPedId(), 170, false)
 			end
 			if not inZone then
 				if IsPedInAnyVehicle(PlayerPedId(), false) then
 					veh = GetVehiclePedIsUsing(PlayerPedId())
-					if Config.TranspatentPlayers then
-						SetEntityAlpha(veh, 170, false)
-					end
+					SetEntityInvincible(veh, true)
 				end
+				SetPlayerInvincible(PlayerId(), true)
+				SetPedCanRagdoll(GetPlayerPed(-1), false)
+				ClearPedBloodDamage(GetPlayerPed(-1))
+				ResetPedVisibleDamage(GetPlayerPed(-1))
+				ClearPedLastWeaponDamage(GetPlayerPed(-1))
 				if Config.JD_logs then
 					exports.JD_logs:discord(GetPlayerName(PlayerId())..' `Entered` a SafeZone', PlayerId(), 0, Config.JD_logs_Color, Config.JD_logs_Channel)
 				end
@@ -66,6 +61,7 @@ Citizen.CreateThread(function()
 						})
 					end
 				end
+				SetEntityInvincible(GetPlayerPed(PlayerId()), false)
 				inZone = true
 			end
 
@@ -91,6 +87,7 @@ Citizen.CreateThread(function()
 					if IsPedInAnyVehicle(PlayerPedId(), false) then
 						veh = GetVehiclePedIsUsing(PlayerPedId())
 						SetEntityAlpha(veh, 255, false)
+						SetEntityCanBeDamaged(veh, true)
 					end
 					if Config.JD_logs then
 						exports.JD_logs:discord(GetPlayerName(PlayerId())..' `Left` a SafeZone', PlayerId(), 0, Config.JD_logs_Color, Config.JD_logs_Channel)
