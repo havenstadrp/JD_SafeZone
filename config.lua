@@ -7,7 +7,7 @@ Config.MapMarker = true				-- Set this to true if you want a marker on the Map
 Config.TranspatentPlayers = true	-- Set this to true if you want Players/Vehicles to become transparent in the safezone
 Config.AntiZoneCamp = false			-- Set this to true will add 10 meters extra to the zone when you exit. (this will not effect entering the zone only exiting)
 
-Config.JD_logs = true				-- Set this to true if you're using JD_logs ( https://github.com/JokeDevil/JD_logs )
+Config.JD_logs = false				-- Set this to true if you're using JD_logs ( https://github.com/JokeDevil/JD_logs )
 Config.JD_logs_Color = "5633648"	-- The color for the embed
 Config.JD_logs_Channel = "safezone"	-- The channel for the logs
 
