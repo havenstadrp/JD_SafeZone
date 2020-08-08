@@ -1,29 +1,61 @@
 Config = {}
 
-Config.Notifications = true			-- set this to true if you want notifications
-Config.pNotify = false				-- Set this to true if you want to use pNotify
-Config.Border = true				-- Set this to true if you want a SafeZone Border
-Config.MapMarker = true				-- Set this to true if you want a marker on the Map
-Config.TranspatentPlayers = true	-- Set this to true if you want Players/Vehicles to become transparent in the safezone
-Config.AntiZoneCamp = false			-- Set this to true will add 10 meters extra to the zone when you exit. (this will not effect entering the zone only exiting)
+Config.TopLeftInfoBox = true
+Config.ShowBorder = true
+Config.BorderHight = 5
 
-Config.JD_logs = false				-- Set this to true if you're using JD_logs ( https://github.com/JokeDevil/JD_logs )
-Config.JD_logs_Color = "5633648"	-- The color for the embed
-Config.JD_logs_Channel = "safezone"	-- The channel for the logs
-
-Config.Zone = { 					-- These are the SafeZones
-	["Sandy PD"] = {x=1835.73,y=3676.72,z=39.89,radius = 50.0},
-
-	["Mission Row"] = {x=446.8,y=-993.06,z=29.26,radius = 40.0},
-	["Medical Center"] = {x=311.62,y=-1443.69,z=29.8,radius = 50.0},
+Config.Zones = {
+    {
+        {1818.45, 2611.60, 45.67}, -- Prison
+        {1809.37, 2611.65, 45.67},
+        {1809.40, 2620.69, 45.67},
+        {1817.80, 2642.32, 45.67},
+        {1834.40, 2688.87, 45.67},
+        {1829.39, 2703.25, 45.67},
+        {1776.49, 2746.40, 45.67},
+        {1761.95, 2751.73, 45.67},
+        {1662.50, 2748.09, 45.67},
+        {1648.50, 2740.81, 45.67},
+        {1585.35, 2679.40, 45.67},
+        {1576.11, 2666.74, 45.67},
+        {1548.48, 2591.62, 45.67},
+        {1547.82, 2576.09, 45.67},
+        {1551.37, 2483.35, 45.67},
+        {1559.03, 2469.66, 45.67},
+        {1652.85, 2410.46, 45.67},
+        {1668.09, 2408.40, 45.67}, 
+        {1748.59, 2420.63, 45.67},
+        {1762.12, 2427.29, 45.67},
+        {1808.14, 2474.48, 45.67},
+        {1812.84, 2488.88, 45.67},
+        {1805.69, 2535.65, 45.67},
+        {1807.59, 2568.37, 45.67},
+        {1808.22, 2592.08, 45.67},
+        {1818.65, 2592.08, 45.67}
+    },
+    {
+        {290.44, -1418.76, 29.84}, -- Central Los Santos Medical Center
+        {348.55, -1467.64, 29.35},
+        {343.89, -1476.06, 29.30},
+        {332.99, -1482.34, 29.89},
+        {331.13, -1483.14, 29.94},
+        {329.34, -1483.67, 29.97},
+        {327.59, -1483.95, 29.99},
+        {325.58, -1483.90, 29.98},
+        {323.64, -1483.58, 29.98},
+        {321.85, -1483.05, 29.97},
+        {320.20, -1482.15, 29.97},
+        {318.52, -1480.99, 29.97},
+        {315.52, -1478.50, 29.97},
+        {327.89, -1463.82, 29.97},
+        {312.78, -1451.30, 29.97},
+        {306.35, -1458.94, 29.97},
+        {284.12, -1440.19, 29.97},
+        {284.85, -1439.43, 29.97},
+        {277.96, -1433.61, 29.97}
+    }
 }
-
--- This are the notifications
-Config.Entered = "You have Entered a SafeZone"
-Config.Left = "You have Left a SafeZone"
-Config.Shoot = "You can NOT do that here"
-Config.WeaponWheel = "You can NOT use weapons here"
 
 
 -- Version checker for when i update :)
-Config.versionCheck = "1.0.1"
+Config.versionCheck = "1.0.2"

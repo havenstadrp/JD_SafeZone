@@ -26,34 +26,9 @@
 ```
 ensure JD_SafeZone
 ```
-
-# Adding more Zones
-```
-Config.Zone = {
-	["Sandy PD"] = {
-    x = 1835.73,
-    y = 3676.72,
-    z = 39.89,
-    radius = 50.0
-    },
-	["Mission Row"] = {
-    x = 446.8,
-    y = -993.06,
-    z = 29.26,
-    radius = 40.0
-    },
-	["Medical Center"] = {
-    x = 311.62,
-    y = -1443.69,
-    z = 29.8,
-    radius = 50.0
-    },
-  ["YOUR_NEW_ZONE_NAME"], = {
-    x = YOUR_NEW_ZONE_X,
-    y = YOUR_NEW_ZONE_Y,
-    z = YOUR_NEW_ZONE_Z,
-    radius = YOUR_NEW_ZONE_RADIUS -- This is how big you want the zone to be.
-  },
-}
-```
+4. configure the Config.lua to add more zones
 ### My Discord: https://discord.gg/m4BvmkG
+
+### Images
+![Image](https://i.gyazo.com/fefe100e0d859b6160fb1d05ee707d22.jpg)
+![Image](https://i.gyazo.com/9c5ac850e1589181e11ac02207e31b93.jpg)
