@@ -58,4 +58,4 @@ Config.Zones = {
 
 
 -- Version checker for when i update :)
-Config.versionCheck = "1.0.2"
+Config.versionCheck = "1.0.3"

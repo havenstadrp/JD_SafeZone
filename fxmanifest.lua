@@ -1,6 +1,6 @@
 author 'JokeDevil'
 description 'JD SafeZone (https://www.jokedevil.com)'
-version '1.0.2'
+version '1.0.3'
 url 'https://jokedevil.com'
 
 
