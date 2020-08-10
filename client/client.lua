@@ -20,7 +20,7 @@ end
 Citizen.CreateThread(function()
     while true do
         local iPed = GetPlayerPed(-1)
-        Citizen.Wait(3)
+        Citizen.Wait(0)
         point = GetEntityCoords(iPed,true)
         local inZone = insidePolygon(point)
         if Config.ShowBorder then
@@ -43,10 +43,11 @@ Citizen.CreateThread(function()
 			ResetPedVisibleDamage(iPed)
             ClearPedLastWeaponDamage(iPed)
             for _, players in ipairs(GetActivePlayers()) do
-                SetEntityNoCollisionEntity(GetPlayerPed(players),iPed,true)
-                if IsPedInAnyVehicle(players, false) then
-                    veh = GetVehiclePedIsUsing(players)
-                    SetEntityNoCollisionEntity(veh, iPed, true)
+                if IsPedInAnyVehicle(GetPlayerPed(players), true) then
+                    veh = GetVehiclePedIsUsing(GetPlayerPed(players))
+                    SetEntityNoCollisionEntity(iPed, veh, true)
+                else
+                    --
                 end
             end
         else
@@ -55,13 +56,6 @@ Citizen.CreateThread(function()
             if IsPedInAnyVehicle(iPed, false) then
                 veh = GetVehiclePedIsUsing(iPed)
                 SetEntityCanBeDamaged(veh, true)
-            end
-            for _, players in ipairs(GetActivePlayers()) do
-                SetEntityNoCollisionEntity(GetPlayerPed(players),iPed,false)
-                if IsPedInAnyVehicle(players, false) then
-                    veh = GetVehiclePedIsUsing(players)
-                    SetEntityNoCollisionEntity(veh, iPed, false)
-                end
             end
         end
     end 
