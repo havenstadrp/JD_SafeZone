@@ -1,5 +1,5 @@
 {
-	"date": "August 10, 2020",
-	"version": "1.0.3",
-	"changelog": "Small Bug Fix"
+	"date": "September 24, 2020",
+	"version": "1.0.4",
+	"changelog": "Fixed issue where people where not taking damage outside the safezone."
 }

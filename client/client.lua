@@ -1,4 +1,5 @@
-notify = false
+local notify = false
+local hasRun = false
 
 local function insidePolygon( point)
     local oddNodes = false
@@ -46,16 +47,23 @@ Citizen.CreateThread(function()
                 if IsPedInAnyVehicle(GetPlayerPed(players), true) then
                     veh = GetVehiclePedIsUsing(GetPlayerPed(players))
                     SetEntityNoCollisionEntity(iPed, veh, true)
-                else
-                    --
                 end
             end
+            hasRun = false
         else
-            --DisplayHelpText("~BLIP_INFO_ICON~ You are ~r~NOT ~w~in a ~g~SafeZone")
-            NetworkSetFriendlyFireOption(true)
-            if IsPedInAnyVehicle(iPed, false) then
-                veh = GetVehiclePedIsUsing(iPed)
-                SetEntityCanBeDamaged(veh, true)
+            if not hasRun then
+                hasRun = true
+                SetEntityInvincible(iPed, false)
+                SetPedCanRagdoll(iPed, true)
+                NetworkSetFriendlyFireOption(true)
+                if IsPedInAnyVehicle(iPed, false) then
+                    veh = GetVehiclePedIsUsing(iPed)
+                    SetEntityCanBeDamaged(veh, true)
+                end
+                if IsPedInAnyVehicle(GetPlayerPed(players), true) then
+                    veh = GetVehiclePedIsUsing(GetPlayerPed(players))
+                    SetEntityNoCollisionEntity(iPed, veh, false)
+                end
             end
         end
     end 
