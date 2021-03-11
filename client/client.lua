@@ -37,6 +37,9 @@ Citizen.CreateThread(function()
             if IsPedInAnyVehicle(iPed, false) then
                 veh = GetVehiclePedIsUsing(iPed)
                 SetEntityCanBeDamaged(veh, false)
+                if Config.MaxVehicleSpeed then
+                    SetVehicleMaxSpeed(veh, Config.MaxVehicleSpeed)
+                end
             end
             SetEntityInvincible(iPed, true)
 			SetPedCanRagdoll(iPed, false)
@@ -59,6 +62,9 @@ Citizen.CreateThread(function()
                 if IsPedInAnyVehicle(iPed, false) then
                     veh = GetVehiclePedIsUsing(iPed)
                     SetEntityCanBeDamaged(veh, true)
+                    if Config.MaxVehicleSpeed then
+                        SetVehicleMaxSpeed(veh, 1000.00)
+                    end
                 end
                 if IsPedInAnyVehicle(GetPlayerPed(players), true) then
                     veh = GetVehiclePedIsUsing(GetPlayerPed(players))

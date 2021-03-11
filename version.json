@@ -1,5 +1,5 @@
 {
-	"date": "September 24, 2020",
-	"version": "1.0.4",
-	"changelog": "Fixed issue where people where not taking damage outside the safezone."
+	"date": "Mar 11, 2021",
+	"version": "1.0.5",
+	"changelog": "Added option to limit vehicle speed inside a safezone."
 }

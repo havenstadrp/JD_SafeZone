@@ -3,6 +3,7 @@ Config = {}
 Config.TopLeftInfoBox = true
 Config.ShowBorder = true
 Config.BorderHight = 5
+Config.MaxVehicleSpeed = 10.00  -- set to false to disable.
 
 Config.Zones = {
     {
@@ -58,4 +59,4 @@ Config.Zones = {
 
 
 -- Version checker for when i update :)
-Config.versionCheck = "1.0.4"
+Config.versionCheck = "1.0.5"
