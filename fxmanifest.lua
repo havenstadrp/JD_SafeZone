@@ -1,7 +1,7 @@
-author 'JokeDevil'
-description 'JD SafeZone (https://www.jokedevil.com)'
-version '1.0.5'
-url 'https://jokedevil.com'
+author 'Prefech'
+description 'JD SafeZone (https://www.prefech.com)'
+version '1.0.6'
+url 'https://prefech.com'
 
 
 -- Server Scripts

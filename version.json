@@ -1,5 +1,5 @@
 {
-	"date": "Mar 11, 2021",
-	"version": "1.0.5",
-	"changelog": "Added option to limit vehicle speed inside a safezone."
+	"date": "Apr 12, 2021",
+	"version": "1.0.6",
+	"changelog": "Added option to use pNotify."
 }

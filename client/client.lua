@@ -1,5 +1,6 @@
 local notify = false
 local hasRun = false
+local notify = true
 
 local function insidePolygon( point)
     local oddNodes = false
@@ -28,8 +29,14 @@ Citizen.CreateThread(function()
             drawPoly(inZone)
         end
         if inZone then
-            if Config.TopLeftInfoBox then
+            if Config.TopLeftInfoBox and not Config.pNotify then
                 DisplayHelpText("~BLIP_INFO_ICON~ You are in a ~g~SafeZone")
+            end
+            if Config.pNotify then
+                if notify then
+                    notify = false
+                    exports.pNotify:SendNotification({text = Config.pNotifyEnterMessage, type = Config.pNotifyEnterType, timeout = math.random(1000, 10000)})
+                end
             end
             NetworkSetFriendlyFireOption(false)
             DisablePlayerFiring(iPed, true)      
@@ -54,6 +61,12 @@ Citizen.CreateThread(function()
             end
             hasRun = false
         else
+            if Config.pNotify then
+                if not notify then
+                    notify = true
+                    exports.pNotify:SendNotification({text = Config.pNotifyExitMessage, type = Config.pNotifyExitType, timeout = math.random(1000, 10000)})
+                end
+            end
             if not hasRun then
                 hasRun = true
                 SetEntityInvincible(iPed, false)

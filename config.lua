@@ -5,6 +5,12 @@ Config.ShowBorder = true
 Config.BorderHight = 5
 Config.MaxVehicleSpeed = 10.00  -- set to false to disable.
 
+Config.pNotify = false
+Config.pNotifyEnterMessage = "You have entered a safezone"
+Config.pNotifyEnterType = "info"
+Config.pNotifyExitMessage = "You have left a safezone"
+Config.pNotifyExitType = "info"
+
 Config.Zones = {
     {
         {1818.45, 2611.60, 45.67}, -- Prison
@@ -59,4 +65,4 @@ Config.Zones = {
 
 
 -- Version checker for when i update :)
-Config.versionCheck = "1.0.5"
+Config.versionCheck = "1.0.6"
