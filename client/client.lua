@@ -41,6 +41,14 @@ Citizen.CreateThread(function()
             NetworkSetFriendlyFireOption(false)
             DisablePlayerFiring(iPed, true)      
             SetCurrentPedWeapon(_source,GetHashKey("WEAPON_UNARMED"),true)
+            if IsPedDoingDriveby(iPed) then
+                DisableControlAction(0, 69, true)
+                DisableControlAction(0, 92, true)
+            else
+                DisableControlAction(0, 69, false)
+                DisableControlAction(0, 92, false)
+            end 
+            
             if IsPedInAnyVehicle(iPed, false) then
                 veh = GetVehiclePedIsUsing(iPed)
                 SetEntityCanBeDamaged(veh, false)
@@ -124,8 +132,8 @@ end
     local bottomRight = vector3(p2[1], p2[2], p2[3] - 1.5)
     local topRight = vector3(p2[1], p2[2], p2[3] + Config.BorderHight)
     
-    DrawPoly(bottomLeft,topLeft,bottomRight,0,255,0,48)
-    DrawPoly(topLeft,topRight,bottomRight,0,255,0,48)
-    DrawPoly(bottomRight,topRight,topLeft,0,255,0,48)
-    DrawPoly(bottomRight,topLeft,bottomLeft,0,255,0,48)
+    DrawPoly(bottomLeft,topLeft,bottomRight,0,255,0,10)
+    DrawPoly(topLeft,topRight,bottomRight,0,255,0,10)
+    DrawPoly(bottomRight,topRight,topLeft,0,255,0,10)
+    DrawPoly(bottomRight,topLeft,bottomLeft,0,255,0,10)
   end
