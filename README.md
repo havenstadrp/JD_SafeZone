@@ -7,8 +7,11 @@
 <h4 align="center">
 	<a href="https://github.com/JokeDevil/JD_SafeZone/releases/latest" title=""><img alt="Release" src="https://img.shields.io/github/v/release/JokeDevil/JD_SafeZone"></a>
 	<a href="LICENSE" title=""><img alt="Licence" src="https://img.shields.io/github/license/JokeDevil/JD_SafeZone.svg"></a>
-	<a href="https://discord.gg/m4BvmkG" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
+	<a href="https://discord.gg/qyPdHzDKmb" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
 </h4>
+
+https://discord.gg/qyPdHzDKmb
+
 <h4 align="center">
  Safezone for FiveM (A place where you can't kill anyone and can't be killed)
 </h4>
@@ -27,7 +30,7 @@
 ensure JD_SafeZone
 ```
 4. configure the Config.lua to add more zones
-### My Discord: https://discord.gg/m4BvmkG
+### My Discord: https://discord.gg/qyPdHzDKmb
 
 ### Images
 ![Image](https://i.gyazo.com/fefe100e0d859b6160fb1d05ee707d22.jpg)
