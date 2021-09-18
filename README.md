@@ -10,7 +10,7 @@
 	<a href="https://discord.gg/qyPdHzDKmb" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
 </h4>
 
-https://discord.gg/qyPdHzDKmb
+https://discord.gg/prefech
 
 <h4 align="center">
  Safezone for FiveM (A place where you can't kill anyone and can't be killed)
@@ -30,7 +30,7 @@ https://discord.gg/qyPdHzDKmb
 ensure JD_SafeZone
 ```
 4. configure the Config.lua to add more zones
-### My Discord: https://discord.gg/qyPdHzDKmb
+### My Discord: https://discord.gg/prefech
 
 ### Images
 ![Image](https://i.gyazo.com/fefe100e0d859b6160fb1d05ee707d22.jpg)
