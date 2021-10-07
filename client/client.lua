@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
                 veh = GetVehiclePedIsUsing(iPed)
                 SetEntityCanBeDamaged(veh, false)
                 if Config.MaxVehicleSpeed then
-                    if not has_value(Config.MaxSpeedBypass, veh) then
+                    if not has_value(Config.MaxSpeedBypass, GetVehicleClass(veh)) then
                         SetVehicleMaxSpeed(veh, Config.MaxVehicleSpeed)
                     end
                 end
