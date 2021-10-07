@@ -19,6 +19,15 @@ local function insidePolygon( point)
     return oddNodes 
 end
 
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+    return false
+end
+
 Citizen.CreateThread(function()
     while true do
         local iPed = GetPlayerPed(-1)
@@ -53,7 +62,9 @@ Citizen.CreateThread(function()
                 veh = GetVehiclePedIsUsing(iPed)
                 SetEntityCanBeDamaged(veh, false)
                 if Config.MaxVehicleSpeed then
-                    SetVehicleMaxSpeed(veh, Config.MaxVehicleSpeed)
+                    if not has_value(Config.MaxSpeedBypass, veh) then
+                        SetVehicleMaxSpeed(veh, Config.MaxVehicleSpeed)
+                    end
                 end
             end
             SetEntityInvincible(iPed, true)
@@ -126,7 +137,7 @@ function drawPoly(isEntityZone)
 end
 
 
-  function _drawWall(p1, p2)
+function _drawWall(p1, p2)
     local bottomLeft = vector3(p1[1], p1[2], p1[3] - 1.5)
     local topLeft = vector3(p1[1], p1[2],  p1[3] + Config.BorderHight)
     local bottomRight = vector3(p2[1], p2[2], p2[3] - 1.5)
@@ -136,4 +147,4 @@ end
     DrawPoly(topLeft,topRight,bottomRight,0,255,0,10)
     DrawPoly(bottomRight,topRight,topLeft,0,255,0,10)
     DrawPoly(bottomRight,topLeft,bottomLeft,0,255,0,10)
-  end
+end

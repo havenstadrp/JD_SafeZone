@@ -3,7 +3,33 @@ Config = {}
 Config.TopLeftInfoBox = true
 Config.ShowBorder = true
 Config.BorderHight = 5
+
 Config.MaxVehicleSpeed = 10.00  -- set to false to disable.
+Config.MaxSpeedBypass = { -- Vehicles classes added in this bypass will still be able to go faster than the max speed set above.
+    --0, -- Compacts  
+    --1, -- Sedans  
+    --2, -- SUVs  
+    --3, -- Coupes  
+    --4, -- Muscle  
+    --5, -- Sports Classics  
+    --6, -- Sports  
+    --7, -- Super  
+    --8, -- Motorcycles  
+    --9, -- Off-road  
+    --10, -- Industrial  
+    --11, -- Utility  
+    --12, -- Vans  
+    --13, -- Cycles  
+    --14, -- Boats  
+    15, -- Helicopters  
+    16, -- Planes  
+    --17, -- Service  
+    --18, -- Emergency  
+    --19, -- Military  
+    --20, -- Commercial  
+    --21, -- Trains
+}
+    
 
 Config.pNotify = false
 Config.pNotifyEnterMessage = "You have entered a safezone"
@@ -65,4 +91,4 @@ Config.Zones = {
 
 
 -- Version checker for when i update :)
-Config.versionCheck = "1.0.6"
+Config.versionCheck = "1.0.7"

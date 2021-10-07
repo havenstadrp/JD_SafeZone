@@ -1,6 +1,6 @@
 author 'Prefech'
 description 'JD SafeZone (https://www.prefech.com)'
-version '1.0.6'
+version '1.0.7'
 url 'https://prefech.com'
 
 
