@@ -29,6 +29,11 @@ Config.MaxSpeedBypass = { -- Vehicles classes added in this bypass will still be
     --20, -- Commercial  
     --21, -- Trains
 }
+
+Config.WeaponBypass = {
+    --GetHashKey("WEAPON_PISTOL"),
+    GetHashKey("WEAPON_PISTOL"),
+}
     
 
 Config.pNotify = false

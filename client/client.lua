@@ -47,16 +47,11 @@ Citizen.CreateThread(function()
                     exports.pNotify:SendNotification({text = Config.pNotifyEnterMessage, type = Config.pNotifyEnterType, timeout = math.random(1000, 10000)})
                 end
             end
-            NetworkSetFriendlyFireOption(false)
-            DisablePlayerFiring(iPed, true)      
-            SetCurrentPedWeapon(_source,GetHashKey("WEAPON_UNARMED"),true)
-            if IsPedDoingDriveby(iPed) then
-                DisableControlAction(0, 69, true)
-                DisableControlAction(0, 92, true)
-            else
-                DisableControlAction(0, 69, false)
-                DisableControlAction(0, 92, false)
-            end 
+            if not has_value(Config.WeaponBypass, GetSelectedPedWeapon(iPed)) then
+                SetCurrentPedWeapon(iPed, GetHashKey("WEAPON_UNARMED"), true)
+                DisablePlayerFiring(iPed, true)
+                SetWeaponDamageModifierThisFrame(GetSelectedPedWeapon(iPed), -1000)
+            end
             
             if IsPedInAnyVehicle(iPed, false) then
                 veh = GetVehiclePedIsUsing(iPed)
