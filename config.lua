@@ -30,9 +30,8 @@ Config.MaxSpeedBypass = { -- Vehicles classes added in this bypass will still be
     --21, -- Trains
 }
 
-Config.WeaponBypass = {
-    --GetHashKey("WEAPON_PISTOL"),
-    GetHashKey("WEAPON_PISTOL"),
+Config.WeaponBypass = { -- Keep in mind that players in the safezone are still bullet proof
+    GetHashKey("WEAPON_SNOWBALL"),
     GetHashKey("WEAPON_STUNGUN"),
 }
     
