@@ -1,5 +1,5 @@
 {
     "date": "Oct 7, 2021",
-    "version": "1.0.8",
-    "changelog": "Added Speed limit bypass option for vehicles classes."
+    "version": "1.0.9.1",
+    "changelog": "Added:\nBypass to use some weapons in the safezone. (Keep in mind players in the safezone are still bullet proof.)"
 }
