@@ -28,6 +28,7 @@ local function has_value (tab, val)
     return false
 end
 
+
 Citizen.CreateThread(function()
     while true do
         local iPed = GetPlayerPed(-1)
