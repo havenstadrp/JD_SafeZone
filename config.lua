@@ -33,6 +33,7 @@ Config.MaxSpeedBypass = { -- Vehicles classes added in this bypass will still be
 Config.WeaponBypass = {
     --GetHashKey("WEAPON_PISTOL"),
     GetHashKey("WEAPON_PISTOL"),
+    GetHashKey("WEAPON_STUNGUN"),
 }
     
 
