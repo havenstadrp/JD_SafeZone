@@ -1,7 +1,7 @@
 Config = {}
 
 Config.TopLeftInfoBox = true
-Config.ShowBorder = true
+Config.ShowBorder = false
 Config.BorderHight = 5
 
 Config.MaxVehicleSpeed = 10.00  -- set to false to disable.
